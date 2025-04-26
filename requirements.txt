@@ -2,3 +2,4 @@ pydub == 0.25.1
 fastapi == 0.115.12
 uvicorn == 0.34.2
 boto3 == 1.38.3
+python-multipart == 0.0.20
