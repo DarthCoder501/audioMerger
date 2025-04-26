@@ -21,7 +21,7 @@ async def merge_audio(
         lyrics_temp.write(await lyrics_audio.read())
         lyrics_path = lyrics_temp.name
 
-    beat_key = "https://stjhacks.s3.us-east-2.amazonaws.com/beat.mp3"  
+    beat_key = "beat.mp3" 
     with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as beat_temp:
         s3.download_fileobj(BUCKET_NAME, beat_key, beat_temp)
         beat_path = beat_temp.name
