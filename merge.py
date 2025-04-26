@@ -56,3 +56,7 @@ async def merge_audio(
     s3_url = f"https://{BUCKET_NAME}.s3.amazonaws.com/{final_key}"
 
     return JSONResponse({"merged_audio_url": s3_url})
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=10000)
